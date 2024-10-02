@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Deficiencia en Cultivo de Cacao</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 90%;
+            margin: auto;
+        }
+
+        h1 {
+            color: #6AB7FF;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: justify;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .checkbox {
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .back-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Evaluación de Deficiencia en Cultivo de Cacao</h1>
+
+        <div class="content">
+            <p>
+                La clorosis, o pérdida de color verde en las hojas de las plantas, es un síntoma común en diferentes cultivos, y estas suele estar asociado a diversas deficiencias de nutrientes en el suelo. Se presenta cuando la planta no recibe cantidades suficientes de nutrientes esenciales para su crecimiento y desarrollo óptimo, lo que afecta la producción de clorofila y, por ende, su capacidad fotosintética.
+            </p>
+            <p>
+                El aprovechamiento de los nutrientes en el suelo del cacao es mayor durante los primeros 5 años del cultivo y luego se estabiliza la tasa de absorción por el resto de vida útil de la plantación. En potasio (K) es el nutriente más absorbido por el cacao, seguido por el nitrógeno (N), calcio (Ca) y magnesio (Mg). La cantidad exacta de nutrientes removidos por un cultivo en particular depende del estado nutricional del árbol.
+            </p>
+            <p>
+                En promedio 1,200 Kg. de semilla de cacao extraen 35 Kg. de N, 10 Kg. de P2O5, 50 Kg. de K2O, 13 Kg. de CaO y 150 Kg. de MgO. Además, también se remueven nutrientes en la cáscara de la mazorca que es rica en K. Por otro lado, también se requieren nutrientes para construir el cuerpo del árbol. Todos estos factores deben ser considerados en la recomendación de fertilización en una plantación de cacao sostenible.
+            </p>
+
+            <h2>TEST para la Evaluación de Deficiencias por Diferentes Criterios</h2>
+            <h3>Evaluación a partir de la Observación de las Hojas</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marque en estas Casillas</th>
+                        <th>Indicador</th>
+                        <th>Tipo de Deficiencia</th>
+                        <th>Criterio Uno</th>
+                        <th>Criterio Dos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-nitrogeno" onclick="mostrarDetalles('nitrogeno')"></td>
+                        <td> Las hojas más viejas presentan un amarillamiento generalizado (clorosis), que comienza en los bordes y se extiende hacia el centro, con un tono verde pálido o amarillento. La planta puede mostrar un crecimiento lento y menor desarrollo de brotes nuevos.</td>
+                        <td id="tipo-deficiencia-nitrogeno"></td>
+                        <td id="criterio-uno-nitrogeno"></td>
+                        <td id="criterio-dos-nitrogeno"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-fosforo" onclick="mostrarDetalles('fosforo')"></td>
+                        <td>Hojas de color verde oscuro con un tamaño más pequeño de lo normal. En casos severos, pueden aparecer manchas marrones o púrpuras, especialmente en los bordes y las venas. También puede observarse un retraso en el crecimiento de las raíces.</td>
+                        <td id="tipo-deficiencia-fosforo"></td>
+                        <td id="criterio-uno-fosforo"></td>
+                        <td id="criterio-dos-fosforo"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-potasio" onclick="mostrarDetalles('potasio')"></td>
+                        <td>Clorosis y necrosis en los bordes de las hojas más viejas (quemaduras marginales). En etapas avanzadas, las hojas pueden desarrollar manchas marrones y secarse en los márgenes, y puede haber una caída prematura de hojas. </td>
+                        <td id="tipo-deficiencia-potasio"></td>
+                        <td id="criterio-uno-potasio"></td>
+                        <td id="criterio-dos-potasio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-magnesio" onclick="mostrarDetalles('magnesio')"></td>
+                        <td>Clorosis internervial en las hojas más viejas, donde las venas permanecen verdes y las áreas entre ellas se vuelven amarillas. El síntoma comienza en los márgenes de la hoja y avanza hacia el centro.</td>
+                        <td id="tipo-deficiencia-magnesio"></td>
+                        <td id="criterio-uno-magnesio"></td>
+                        <td id="criterio-dos-magnesio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-hierro" onclick="mostrarDetalles('hierro')"></td>
+                        <td>Clorosis internervial en hojas jóvenes, con venas que permanecen verdes y el área entre ellas amarilla. Los síntomas suelen presentarse en las hojas más jóvenes y en las partes superiores de la planta.  </td>
+                        <td id="tipo-deficiencia-hierro"></td>
+                        <td id="criterio-uno-hierro"></td>
+                        <td id="criterio-dos-hierro"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-calcio" onclick="mostrarDetalles('calcio')"></td>
+                        <td>Hojas jóvenes deformadas, bordes rizados y puntas marrones, los brotes nuevos mueren. Se confunde con magnésio, pero la de calcio se presenta en las hojas nuevas mientras que en magnesio aparece en las hojas viejas.</td>
+                        <td id="tipo-deficiencia-calcio"></td>
+                        <td id="criterio-uno-calcio"></td>
+                        <td id="criterio-dos-calcio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-zinc" onclick="mostrarDetalles('zinc')"></td>
+                        <td>Hojas pequeñas con clorosis entre las venas en las hojas jóvenes, desarrollo reducido de brotes y entrenudos cortos, lo que puede dar un aspecto de "roseta" en los brotes terminales.</td>
+                        <td id="tipo-deficiencia-zinc"></td>
+                        <td id="criterio-uno-zinc"></td>
+                        <td id="criterio-dos-zinc"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-Azufre" onclick="mostrarDetalles('Azufre')"></td>
+                        <td>Hojas pequeñas con clorosis entre las venas en las hojas jóvenes, desarrollo reducido de brotes y entrenudos cortos, lo que puede dar un aspecto de "roseta" en los brotes terminales.</td>
+                        <td id="tipo-deficiencia-Azufre"></td>
+                        <td id="criterio-uno-Azufre"></td>
+                        <td id="criterio-dos-Azufre"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="back-button">
+            <button onclick="window.location.href='web.html'">Regresar al Inicio</button>
+        </div>
+
+    </div>
+
+    <script>
+        function mostrarDetalles(deficiencia) {
+          if (document.getElementById('deficiencia-' + deficiencia).checked) {
+              document.getElementById('tipo-deficiencia-' + deficiencia).innerHTML = obtenerTipoDeficiencia(deficiencia);
+              document.getElementById('criterio-uno-' + deficiencia).innerHTML = obtenerCriterioUno(deficiencia);
+              document.getElementById('criterio-dos-' + deficiencia).innerHTML = obtenerCriterioDos(deficiencia);
+          } else {
+              document.getElementById('tipo-deficiencia-' + deficiencia).innerHTML = '';
+              document.getElementById('criterio-uno-' + deficiencia).innerHTML = '';
+              document.getElementById('criterio-dos-' + deficiencia).innerHTML = '';
+          }
+        }
+
+        function obtenerTipoDeficiencia(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Deficiencia de Nitrógeno';
+              case 'fosforo':
+                  return 'Deficiencia de Fósforo';
+              case 'potasio':
+                  return 'Deficiencia de Potasio';
+              case 'magnesio':
+                  return 'Deficiencia de Magnesio';
+              case 'hierro':
+                  return 'Deficiencia de Hierro';
+              case 'calcio':
+                  return 'Deficiencia de Calcio';
+              case 'zinc':
+                  return 'Deficiencia de Zinc';
+                  case 'Azufre':
+                  return 'Deficiencia de Azufre';
+              default:
+                  return '';
+          }
+        }
+
+        function obtenerCriterioUno(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Una planta con deficiencia detiene su crecimiento y rápidamente presenta enanismo...';
+              case 'fosforo':
+                  return 'La planta crece lentamente por falta de raíces absorbente...';
+              case 'potasio':
+                  return 'Los síntomas aparecen inicialmente en las hojas más viejas...';
+              case 'magnesio':
+                  return 'Aparece como una clorosis que comienza en las áreas cercanas...';
+              case 'hierro':
+                  return 'En deficiencia severa las hojas presentan color blanco amarillento...';
+              case 'calcio':
+                  return 'Los síntomas de deficiencia de calcio aparecen en las hojas más jóvenes...';
+              case 'zinc':
+                  return 'Un indicador notable se presenta en las hojas en un estado temprano...';
+                  case 'Azufre':
+                  return '"La deficiencia de azufre es difícil de ver, se confunden con deficiencia de nitrógeno, pero este inicia siempre en hojas nuevas de color amarillo brillante incluye las nervaduras y no existe reducción marcada del tamaño de las hoja.';
+                  default:
+                  return '';
+          }
+        }
+
+        function obtenerCriterioDos(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Cuando la deficiencia es severa este color verde pálido uniforme...';
+              case 'fosforo':
+                  return 'El crecimiento nuevo tiene internudos cortos...';
+              case 'potasio':
+                  return 'La necrosis foliar que es característica de bajos niveles de potasio...';
+              case 'magnesio':
+                  return 'A medida que la carencia avanza los filos de las hojas...';
+              case 'hierro':
+                  return 'Al inicio se observa una clorosis marcada de las venas...';
+              case 'calcio':
+                  return 'Cuando se presenta clorosis, la causada por la deficiencia de calcio...';
+              case 'zinc':
+                  return 'Los síntomas más útiles para diagnóstico visual son las venas prominentes...';
+                  case 'Azufre':
+                  return 'La deficiencia de azufre es difícil de ver, se confunden con deficiencia de nitrógeno, pero este inicia siempre en hojas nuevas de color amarillo brillante incluye las nervaduras y no existe reducción marcada del tamaño de las hoja';
+                  default:
+                  return '';
+          }
+        }
+    </script>
+
+</body>
+</html>
+

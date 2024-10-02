@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Deficiencia en Cultivo de Café</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            color: #6AB7FF;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: justify;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .checkbox {
+            text-align: center;
+        }
+
+        .back-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Evaluación de Deficiencia en Cultivo de Café</h1>
+
+        <div class="content">
+            <p>
+                La clorosis, o pérdida de color verde en las hojas de las plantas, es un síntoma común en diferentes cultivos, y estas suele estar asociado a diversas deficiencias de nutrientes en el suelo. Esta condición se presenta cuando la planta no recibe cantidades suficientes de nutrientes esenciales para su crecimiento y desarrollo óptimo, lo que afecta la producción de clorofila y, por ende, su capacidad fotosintética.
+            </p>
+            <p>
+                En el caso del café, la clorosis puede ser causada por deficiencias de varios nutrientes del suelo, como nitrógeno, hierro, magnesio, y zinc, entre otros. Cada uno de estos nutrientes cumple funciones críticas en los procesos fisiológicos de la planta. Por ejemplo, el nitrógeno es fundamental para la síntesis de proteínas y el crecimiento vegetativo, mientras que el hierro es vital para la formación de clorofila. La carencia de estos nutrientes en el suelo puede resultar en diferentes tipos de clorosis, que se manifiestan con patrones y síntomas específicos en las hojas.
+            </p>
+            <p>
+                Identificar las deficiencias nutricionales del suelo a través de los síntomas de clorosis en las plantas de café es esencial para implementar prácticas de manejo agronómico adecuadas, como la fertilización balanceada, la corrección del pH del suelo, y el uso de enmiendas orgánicas. Estas medidas no solo corrigen los desequilibrios existentes, sino que también promueven la salud general de la planta y optimizan su rendimiento.
+            </p>
+
+            <h2>TEST para la Evaluación de Deficiencias por Diferentes Criterios</h2>
+            <h3>Evaluación a partir de la Observación de las Hojas</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marque en estas Casillas</th>
+                        <th>Indicador</th>
+                        <th>Tipo de Deficiencia</th>
+                        <th>Criterio Uno</th>
+                        <th>Criterio Dos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-nitrogeno" onclick="mostrarDetalles('nitrogeno')"></td>
+                        <td>Hojas más viejas presentan un amarillamiento generalizado...</td>
+                        <td id="tipo-deficiencia-nitrogeno"></td>
+                        <td id="criterio-uno-nitrogeno"></td>
+                        <td id="criterio-dos-nitrogeno"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-fosforo" onclick="mostrarDetalles('fosforo')"></td>
+                        <td>Hojas más pequeñas y de color verde oscuro...</td>
+                        <td id="tipo-deficiencia-fosforo"></td>
+                        <td id="criterio-uno-fosforo"></td>
+                        <td id="criterio-dos-fosforo"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-potasio" onclick="mostrarDetalles('potasio')"></td>
+                        <td>Bordes de las hojas viejas se ponen amarillas o marrones...</td>
+                        <td id="tipo-deficiencia-potasio"></td>
+                        <td id="criterio-uno-potasio"></td>
+                        <td id="criterio-dos-potasio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-magnesio" onclick="mostrarDetalles('magnesio')"></td>
+                        <td>Clorosis entre las venas de las hojas más viejas...</td>
+                        <td id="tipo-deficiencia-magnesio"></td>
+                        <td id="criterio-uno-magnesio"></td>
+                        <td id="criterio-dos-magnesio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-hierro" onclick="mostrarDetalles('hierro')"></td>
+                        <td>Clorosis internervial en hojas jóvenes...</td>
+                        <td id="tipo-deficiencia-hierro"></td>
+                        <td id="criterio-uno-hierro"></td>
+                        <td id="criterio-dos-hierro"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-calcio" onclick="mostrarDetalles('calcio')"></td>
+                        <td>Hojas jóvenes deformadas o curvadas...</td>
+                        <td id="tipo-deficiencia-calcio"></td>
+                        <td id="criterio-uno-calcio"></td>
+                        <td id="criterio-dos-calcio"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="deficiencia-zinc" onclick="mostrarDetalles('zinc')"></td>
+                        <td>Reducción del tamaño de las hojas, encrespamiento...</td>
+                        <td id="tipo-deficiencia-zinc"></td>
+                        <td id="criterio-uno-zinc"></td>
+                        <td id="criterio-dos-zinc"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="footer">
+            <p>Corporación Universitaria Minuto de Dios</p>
+            <img src="asesoria_logo.png" width="200">
+        </div>
+
+        <div class="back-button">
+            <button onclick="window.location.href='web.html'">Regresar al Inicio</button>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar los detalles según la deficiencia seleccionada
+        function mostrarDetalles(deficiencia) {
+          if (document.getElementById('deficiencia-' + deficiencia).checked) {
+              // Muestra el contenido de las celdas
+              document.getElementById('tipo-deficiencia-' + deficiencia).innerHTML = obtenerTipoDeficiencia(deficiencia);
+              document.getElementById('criterio-uno-' + deficiencia).innerHTML = obtenerCriterioUno(deficiencia);
+              document.getElementById('criterio-dos-' + deficiencia).innerHTML = obtenerCriterioDos(deficiencia);
+          } else {
+              // Limpia el contenido si se desmarca la casilla
+              document.getElementById('tipo-deficiencia-' + deficiencia).innerHTML = '';
+              document.getElementById('criterio-uno-' + deficiencia).innerHTML = '';
+              document.getElementById('criterio-dos-' + deficiencia).innerHTML = '';
+          }
+        }
+
+        // Funciones para obtener los detalles según la deficiencia
+        function obtenerTipoDeficiencia(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Deficiencia de Nitrógeno';
+              case 'fosforo':
+                  return 'Deficiencia de Fósforo';
+              case 'potasio':
+                  return 'Deficiencia de Potasio';
+              case 'magnesio':
+                  return 'Deficiencia de Magnesio';
+              case 'hierro':
+                  return 'Deficiencia de Hierro';
+              case 'calcio':
+                  return 'Deficiencia de Calcio';
+              case 'zinc':
+                  return 'Deficiencia de Zinc';
+              default:
+                  return '';
+          }
+        }
+
+        function obtenerCriterioUno(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Las deficiencias de N normalmente se presentan en las hojas más viejas...';
+              case 'fosforo':
+                  return 'Pueden aparecer puntos necróticos en las hojas...';
+              case 'potasio':
+                  return 'Aparecen puntos necróticos dentro del tejido clorótico...';
+              case 'magnesio':
+                  return 'Las deficiencias severas del magnesio presentan amarillamiento...';
+              case 'hierro':
+                  return 'Las hojas jóvenes se vuelven verde pálido...';
+              case 'calcio':
+                  return 'Las hojas jóvenes desarrollan una clorosis irregular...';
+              case 'zinc':
+                  return 'Las hojas se vuelven largas y delgadas...';
+              default:
+                  return '';
+          }
+        }
+
+        function obtenerCriterioDos(deficiencia) {
+          switch(deficiencia) {
+              case 'nitrogeno':
+                  return 'Las clorosis por deficiencias de N y S son muy similares...';
+              case 'fosforo':
+                  return 'Las hojas jóvenes no cambian mucho...';
+              case 'potasio':
+                  return 'La necrosis foliar es característica de bajos niveles de potasio...';
+              case 'magnesio':
+                  return 'Dentro del tejido clorótico se desarrollan manchas irregulares...';
+              case 'hierro':
+                  return 'Las venas se quedan verdes solo en casos muy severos...';
+              case 'calcio':
+                  return 'Deficiencia de calcio se nota más en cafetos pequeños...';
+              case 'zinc':
+                  return 'Es característico de esta deficiencia que se vean entrenudos más cortos...';
+              default:
+                  return '';
+          }
+        }
+        
+    </script>
+   
+
+</body>
+</html>
+
